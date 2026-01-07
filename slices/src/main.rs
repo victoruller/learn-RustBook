@@ -12,7 +12,6 @@ fn main() {
     let _slice = &hello_world[..len]; // 0 - final
     let _slice = &hello_world[0..];   // 0 - final
     let _slice = &hello_world[..];    // 0 - final
-    let _slice = &hello_world[1, 3, 6, 8]; // caracteres que estão no index 1, 3, 6 e 8
 
     let hello = first_word(&hello_world);
     println!("{}", hello);

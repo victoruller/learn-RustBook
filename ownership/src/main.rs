@@ -36,7 +36,6 @@ fn main() {
 
 
 
-
 // Exclusão Nº3: BORROW SITUATIONS
 
     // -- Situação 1 (OK) -- Borrow com variável de tamanho fixo.
@@ -62,8 +61,6 @@ fn main() {
 
 
 
-
-
     // -- Situação 3 (ERRO) -- Borrow de owner
     let _real_string: String = String::from("String propriamente dita"); // String pode modificar seu tamanho, visto ser um tipo complexo;
 
@@ -74,14 +71,12 @@ fn main() {
 
 
 
-
-
     // -- Situação 4 (ERRO) -- Borrow de owner como parâmetro para função
     let _real_string: String = String::from("String propriamente dita");
 
     function(_real_string);
 
-    //    println!("{realString} Foi movida para 's' da função, não existe mais"); // <- erro de compulação (borrow of moved value)
+    //    println!("{realString} Foi movida para 's' da função, não existe mais"); // <- erro de compilação (borrow of moved value)
 
     let _real_string: String = String::from("String propriamente dita");
     println!("{_real_string}");
@@ -90,7 +85,7 @@ fn main() {
 
 
 
-    // -- Situação 5 (ERRO) -- Shaowing o owner
+    // -- Situação 5 (ERRO) -- Shadowing o owner
 
     let _real_string: String = String::from("String propriamente dita");
     let _real_string = 13; // A string do owner foi deletada
