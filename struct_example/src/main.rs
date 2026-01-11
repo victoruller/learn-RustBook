@@ -52,9 +52,15 @@ fn main() {
     // using struct method generically (associated functions)
     let square = Rectangle::square(30);
     println!(
-        "4. he area of the square is: {} square pixels -> {} x {}",
+        "4. the area of the square is: {} square pixels -> {} x {}",
         square.area(), square.width, square.height
     );
+
+    // using method as associated function
+    println!(
+        "5. the area of the square is: {}",
+        Rectangle::area(&square)
+    )
 }
 
 
